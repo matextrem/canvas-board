@@ -1,0 +1,67 @@
+.Board {
+  background-color: #eeeeee;
+  display: inline-block;
+
+  background-color: #f1f2f3;
+  background-image: -webkit-linear-gradient(
+      0deg,
+      transparent 0.05em,
+      rgba(0, 0, 0, 0.05) 0.05em,
+      rgba(0, 0, 0, 0.05) 0.125em,
+      transparent 0.125em
+    ),
+    -webkit-linear-gradient(rgba(0, 0, 0, 0.05) 0.0625em, transparent 0.0625em);
+  background-image: -moz-linear-gradient(
+      0deg,
+      transparent 0.05em,
+      rgba(0, 0, 0, 0.05) 0.05em,
+      rgba(0, 0, 0, 0.05) 0.125em,
+      transparent 0.125em
+    ),
+    -moz-linear-gradient(rgba(0, 0, 0, 0.05) 0.0625em, transparent 0.0625em);
+  background-image: -ms-linear-gradient(
+      0deg,
+      transparent 0.05em,
+      rgba(0, 0, 0, 0.05) 0.05em,
+      rgba(0, 0, 0, 0.05) 0.125em,
+      transparent 0.125em
+    ),
+    -ms-linear-gradient(rgba(0, 0, 0, 0.05) 0.0625em, transparent 0.0625em);
+  background-image: -o-linear-gradient(
+      0deg,
+      transparent 0.05em,
+      rgba(0, 0, 0, 0.05) 0.05em,
+      rgba(0, 0, 0, 0.05) 0.125em,
+      transparent 0.125em
+    ),
+    -o-linear-gradient(rgba(0, 0, 0, 0.05) 0.0625em, transparent 0.0625em);
+  background-image: linear-gradient(
+      0deg,
+      transparent 0.05em,
+      rgba(0, 0, 0, 0.05) 0.05em,
+      rgba(0, 0, 0, 0.05) 0.125em,
+      transparent 0.125em
+    ),
+    inear-gradient(rgba(0, 0, 0, 0.05) 0.0625em, transparent 0.0625em);
+  background-size: 0.75em 0.75em;
+  background-position: 0 -0.5em;
+}
+
+.u-hidden {
+  display: none;
+}
+
+.button--reset {
+  color: white;
+  margin-bottom: 0 !important;
+}
+
+body {
+  overflow-x: hidden;
+}
+footer div {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+}
