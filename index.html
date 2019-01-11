@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="./css/base.css" />
     <link rel="stylesheet" type="text/css" href="./css/surface_styles.css" />
   </head>
-  <body class="BoardPage">
+  <body>
     <input type="checkbox" id="nav--super-vertical-responsive" />
     <label for="nav--super-vertical-responsive">MENU</label>
     <aside
@@ -55,24 +55,24 @@
         </div>
         <div id="board" class="g--12 g-s--12 card">
           <h1>Canvas board 📊</h1>
-          <div class="Board g--7 g-s--7">
+          <div class="board g--7 g-s--7">
             <canvas id="canvas" width="500" height="500"></canvas>
             <button class="btn--red button--reset right">Reset Board</button>
           </div>
           <div class="g--4 g-s--4 right">
-            <h2 class="Info-title">Info</h3>
-            <div class="Info-none">
-              <p class="Info-none--text">
+            <h2 class="info-title">Info</h3>
+            <div class="info-none">
+              <p class="info-none--text">
                 There is no information yet.
                 Please click in 3 (three) different points inside the board to see further information.
               </p>
             </div>
-            <div class="Info-content u-hidden">
-              <h3 class="Info-title--points">Points</h3>
-              <ol type="1" class="Info-content--list">
-                <li class="Info-content--point"></li>
-                <li class="Info-content--point"></li>
-                <li class="Info-content--point"></li>
+            <div class="info-content u-hidden">
+              <h3 class="info-title--points">Points</h3>
+              <ol type="1" class="info-content--list">
+                <li class="info-content--point"></li>
+                <li class="info-content--point"></li>
+                <li class="info-content--point"></li>
               </ol>
               <h3 class="Info-title--Areas">Areas</h3>
               <ul class="Info-content--list">
@@ -97,7 +97,7 @@
             <p>The cordinates of the selected points as well as the area of the paralellogram and circle should be presented to the user.</p>
             <p>The user is free to move around the points. This makes the paralellogram, circle and printed information update accordingly.</p>
             <p>There is also a "reset" feature that clears the board and lets the user select three new points, repeating the process described above.</p>
-            <a href="#board" class="Button--back">Go to the board</a>
+            <a href="#board">Go to the board</a>
           </main>
         </div>
       </div>

@@ -139,7 +139,7 @@ const updateScreen = function(selection, updatePoint) {
 }
 
 const displayInfo = function(info) {
-  const pointElements = document.querySelectorAll('.Info-content--point')
+  const pointElements = document.querySelectorAll('.info-content--point')
   const parallelogramPoints = info.parallelogram.points
   const parallelogram = info.parallelogram
   const circle = info.circle
@@ -148,13 +148,13 @@ const displayInfo = function(info) {
   )
 
   document.querySelector(
-    '.Info-content--parallelogramArea'
+    '.info-content--parallelogramArea'
   ).textContent = `Parallelogram: ${parallelogram.area}`
-  document.querySelector('.Info-content--circleArea').textContent = `Circle: ${
+  document.querySelector('.info-content--circleArea').textContent = `Circle: ${
     circle.area
   }`
-  document.querySelector('.Info-none').classList.add('u-hidden')
-  document.querySelector('.Info-content').classList.remove('u-hidden')
+  document.querySelector('.info-none').classList.add('u-hidden')
+  document.querySelector('.info-content').classList.remove('u-hidden')
 }
 
 // Call the mouse position, verify how many dots are in the screen, call the dots/parallelogram draw function. Manage events
