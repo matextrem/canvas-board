@@ -85,7 +85,7 @@ const toggleTooltip = function(position, size) {
         tip = position.tip || ''
       }
       context.font = '12px Arial'
-      context.fillStyle = black //<======= here
+      context.fillStyle = black
       context.fillText(tip, position.x + 5, position.y - 10, size)
     },
     true
