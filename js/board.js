@@ -4,7 +4,7 @@ import Parallelogram from './classes/Parallelogram.js'
 Object.prototype.containDot = function(mouseX, mouseY) {
   const dx = mouseX - this.x
   const dy = mouseY - this.y
-  return dx * dx + dy * dy < dotRadius * dotRadius
+  return Math.pow(dx, 2) + Math.pow(dy, 2) < Math.pow(dotRadius, 2)
 }
 
 // General vars
@@ -74,6 +74,7 @@ const mouseUp = function(e) {
   isDragging = false
 }
 
+// Show the toltip when mouse is over the point
 const toggleTooltip = function(position, size) {
   canvas.addEventListener(
     'mousemove',
