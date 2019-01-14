@@ -1,6 +1,4 @@
-import Shape from './Shape.js'
-
-export default class Parallelogram extends Shape {
+class Parallelogram extends Shape {
   drawShape() {
     const points = this.position.points
     if (points.length === 3) {

@@ -1,6 +1,3 @@
-import Circle from './classes/Circle.js'
-import Parallelogram from './classes/Parallelogram.js'
-
 Object.prototype.containDot = function(mouseX, mouseY) {
   const dx = mouseX - this.x
   const dy = mouseY - this.y
@@ -8,7 +5,7 @@ Object.prototype.containDot = function(mouseX, mouseY) {
 }
 
 // General vars
-const resetButton = document.querySelector('.Button--reset')
+const resetButton = document.querySelector('.button--reset')
 const canvas = document.getElementById('canvas')
 const context = canvas.getContext('2d')
 const blue = '#005293'
@@ -76,22 +73,25 @@ const mouseUp = function(e) {
 
 // Show the toltip when mouse is over the point
 const toggleTooltip = function(position, size) {
-  canvas.addEventListener(
-    'mousemove',
-    e => {
-      let tip = ''
-      const mouse = getMousePosition(e)
-      if (position.containDot(mouse.x, mouse.y)) {
-        tip = position.tip || ''
-      }
-      context.font = '12px Arial'
-      context.fillStyle = black
-      context.fillText(tip, position.x + 5, position.y - 10, size)
-    },
-    true
-  )
+  if (points.length >= 3) {
+    canvas.addEventListener(
+      'mousemove',
+      e => setTooltipOn(e, position, size),
+      true
+    )
+  }
 }
 
+const setTooltipOn = (e, position, size) => {
+  let tip = ''
+  const mouse = getMousePosition(e)
+  if (position.containDot(mouse.x, mouse.y)) {
+    tip = position.tip || ''
+  }
+  context.font = '12px Arial'
+  context.fillStyle = black
+  context.fillText(tip, position.x + 5, position.y - 10, size)
+}
 const writeDotNumber = function(number, position, size) {
   const dotNumberPos = 10
   context.font = '10px Arial'
@@ -109,6 +109,8 @@ const updateScreen = function(selection, updatePoint) {
   if (selection && isDragging) {
     points[updatePoint] = selection
     points[updatePoint].tip = `X: ${selection.x} Y: ${selection.y}`
+    // Update points
+    points.pop()
   }
 
   const parallelogram = new Parallelogram(blue, { points }, context)
@@ -188,8 +190,11 @@ const resetBoard = () => {
   context.closePath()
   context.clearRect(0, 0, canvas.width, canvas.height)
   points = []
+  document.querySelector('.info-none').classList.remove('u-hidden')
+  document.querySelector('.info-content').classList.add('u-hidden')
   canvas.removeEventListener('mousedown', mouseDown, true)
   canvas.removeEventListener('mousemove', mouseMove, true)
+  canvas.removeEventListener('mousemove', setTooltipOn, true)
   canvas.removeEventListener('mouseup', mouseUp, true)
   canvas.addEventListener('click', handleMouseClick)
 }

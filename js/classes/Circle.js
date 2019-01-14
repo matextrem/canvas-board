@@ -1,6 +1,4 @@
-import Shape from './Shape.js'
-
-export default class Circle extends Shape {
+class Circle extends Shape {
   constructor(color, position, size, stroke, fill, context) {
     super(color, position, context)
     this.radius = size

@@ -1,66 +1,66 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>JavaScript assignment - Canvas</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="./css/base.css" />
-    <link rel="stylesheet" type="text/css" href="./css/surface_styles.css" />
-  </head>
-  <body>
-    <input type="checkbox" id="nav--super-vertical-responsive" />
-    <label for="nav--super-vertical-responsive">MENU</label>
-    <aside
-      class="nav--super-vertical g--2 g-m--3 g-s--6 g-t--12 no-margin-vertical"
-    >
-      <div class="g--12 logo-area no-margin-vertical">
-        <h4 class="color--pink no-margin-vertical">Canvas Board</h4>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>JavaScript assignment - Canvas</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="./css/base.css" />
+  <link rel="stylesheet" type="text/css" href="./css/surface_styles.css" />
+</head>
+
+<body>
+  <input type="checkbox" id="nav--super-vertical-responsive" />
+  <label for="nav--super-vertical-responsive">MENU</label>
+  <aside class="nav--super-vertical g--2 g-m--3 g-s--6 g-t--12 no-margin-vertical">
+    <div class="g--12 logo-area no-margin-vertical">
+      <h4 class="color--pink no-margin-vertical">Canvas Board</h4>
+    </div>
+    <nav class="g--12 no-margin-vertical">
+      <a href="#about">About</a> <a href="#board">Board</a>
+      <a href="#tutorial">Tutorial</a>
+    </nav>
+  </aside>
+  <main class="g--10 g-m--12 m--2 m-m--0 no-margin-vertical">
+    <header class="container">
+      <h1 class="m--1 g--12 g-s--12 docsHeader">
+        Canvas Board Project - Mati Dastugue
+      </h1>
+    </header>
+    <div class="g--10 g-s--12 m--1 m-m--0">
+      <div id="about" class="g--12 g-s--12 card">
+        <h2>About this web application 🚀</h2>
+        <p>
+          This is a web application developed using HTML5 Canvas, CSS and pure
+          ES6 javascript.
+        </p>
+        <h4>Responsiveness:</h4>
+        <p>
+          This application is totallyy responsive on desktop, tablets and
+          smartphone on landscape mode.
+        </p>
+        <h4>Draggable dots:</h4>
+        <p>
+          As far as this application has been tested, draggable feature works
+          only on desktop.
+        </p>
+        <h4>Development tools:</h4>
+        <ul>
+          <li>
+            <h6>Text Editor:</h6>
+            <a href="https://code.visualstudio.com/"> VS Code</a>
+          </li>
+        </ul>
       </div>
-      <nav class="g--12 no-margin-vertical">
-        <a href="#about">About</a> <a href="#board">Board</a>
-        <a href="#tutorial">Tutorial</a>
-      </nav>
-    </aside>
-    <main class="g--10 g-m--12 m--2 m-m--0 no-margin-vertical">
-      <header class="container">
-        <h1 class="m--1 g--12 g-s--12 docsHeader">
-          Canvas Board Project - Mati Dastugue
-        </h1>
-      </header>
-      <div class="g--10 g-s--12 m--1 m-m--0">
-        <div id="about" class="g--12 g-s--12 card">
-          <h2>About this web application 🚀</h2>
-          <p>
-            This is a web application developed using HTML5 Canvas, CSS and pure
-            ES6 javascript.
-          </p>
-          <h4>Responsiveness:</h4>
-          <p>
-            This application is totallyy responsive on desktop, tablets and
-            smartphone on landscape mode.
-          </p>
-          <h4>Draggable dots:</h4>
-          <p>
-            As far as this application has been tested, draggable feature works
-            only on desktop.
-          </p>
-          <h4>Development tools:</h4>
-          <ul>
-            <li>
-              <h6>Text Editor:</h6>
-              <a href="https://code.visualstudio.com/"> VS Code</a>
-            </li>
-          </ul>
+      <div id="board" class="g--12 g-s--12 card">
+        <h1>Canvas board 📊</h1>
+        <div class="board g--7 g-s--7">
+          <canvas id="canvas" width="500" height="500"></canvas>
+          <button class="btn--red button--reset right">Reset Board</button>
         </div>
-        <div id="board" class="g--12 g-s--12 card">
-          <h1>Canvas board 📊</h1>
-          <div class="board g--7 g-s--7">
-            <canvas id="canvas" width="500" height="500"></canvas>
-            <button class="btn--red button--reset right">Reset Board</button>
-          </div>
-          <div class="g--4 g-s--4 right">
-            <h2 class="info-title">Info</h3>
+        <div class="g--4 g-s--4 right">
+          <h2 class="info-title">Info</h3>
             <div class="info-none">
               <p class="info-none--text">
                 There is no information yet.
@@ -76,38 +76,49 @@
               </ol>
               <h3 class="Info-title--Areas">Areas</h3>
               <ul class="Info-content--list">
-                <li class="Info-content--parallelogramArea">Parallelogram: </li>
-                <li class="Info-content--circleArea">Circle: </li>
+                <li class="info-content--parallelogramArea">Parallelogram: </li>
+                <li class="info-content--circleArea">Circle: </li>
               </ul>
             </div>
-          </div>
-        </div>
-        <div id="tutorial" class="g--12 g-s--12 card">
-            <h2>How to use the Board ⚡</h2>
-            <h3>Shapes</h3>
-            <p>The goal of this task is to write a simple html/javascript program that interacts with the user and draws some geometrical shapes. The program is launched by viewing "index.html" in a recent standars-compliant web browser</p>
-            <h3>Basic flow</h3>
-            <p>The user selects three arbitrary points within the client area of the browser. As they are selected, the program highlights their location by drawing red circles, 11 pixels in diameter, cantered on each selected point.</p>
-            <p>Based on these three points, two additional shapes are drawn:</p>
-            <ol>
-              <li>A blue paralelogram, having three of its corners in the points selected by the user.</li>
-              <li>A yellow circle, with the same area and centre of mass as the parallelogram.</li>
-            </ol>
-            <p>These shapes should not be filled.</p>
-            <p>The cordinates of the selected points as well as the area of the paralellogram and circle should be presented to the user.</p>
-            <p>The user is free to move around the points. This makes the paralellogram, circle and printed information update accordingly.</p>
-            <p>There is also a "reset" feature that clears the board and lets the user select three new points, repeating the process described above.</p>
-            <a href="#board">Go to the board</a>
-          </main>
         </div>
       </div>
-      <footer class="g--10 m--2 g-m--12 m-m--0 no-margin-vertical">
-        <div class="g--10 m--1 color--white">
-          Mati Dastugue - 2018
-        </div>
-      </footer>
-    </main>
+      <div id="tutorial" class="g--12 g-s--12 card">
+        <h2>How to use the Board ⚡</h2>
+        <h3>Shapes</h3>
+        <p>The goal of this task is to write a simple html/javascript program that interacts with the user and draws
+          some geometrical shapes. The program is launched by viewing "index.html" in a recent standars-compliant web
+          browser</p>
+        <h3>Basic flow</h3>
+        <p>The user selects three arbitrary points within the client area of the browser. As they are selected, the
+          program highlights their location by drawing red circles, 11 pixels in diameter, cantered on each selected
+          point.</p>
+        <p>Based on these three points, two additional shapes are drawn:</p>
+        <ol>
+          <li>A blue paralelogram, having three of its corners in the points selected by the user.</li>
+          <li>A yellow circle, with the same area and centre of mass as the parallelogram.</li>
+        </ol>
+        <p>These shapes should not be filled.</p>
+        <p>The cordinates of the selected points as well as the area of the paralellogram and circle should be
+          presented to the user.</p>
+        <p>The user is free to move around the points. This makes the paralellogram, circle and printed information
+          update accordingly.</p>
+        <p>There is also a "reset" feature that clears the board and lets the user select three new points, repeating
+          the process described above.</p>
+        <a href="#board">Go to the board</a>
+  </main>
+  </div>
+  </div>
+  <footer class="g--10 m--2 g-m--12 m-m--0 no-margin-vertical">
+    <div class="g--10 m--1 color--white">
+      Mati Dastugue - 2019
+    </div>
+  </footer>
+  </main>
 
-    <script type="module" src="./js/board.js"></script>
-  </body>
+  <script src="./js/classes/Shape.js"></script>
+  <script src="./js/classes/Circle.js"></script>
+  <script src="./js/classes/Parallelogram.js"></script>
+  <script src="./js/board.js"></script>
+</body>
+
 </html>

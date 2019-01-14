@@ -1,4 +1,4 @@
-export default class Shape {
+class Shape {
   constructor(color, position, context) {
     // code
     this.color = color
